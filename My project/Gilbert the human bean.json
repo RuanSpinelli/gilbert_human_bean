@@ -1,9 +1,9 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 99,
-    "major": 4,
-    "minor": 0,
+    "build": 210,
+    "major": 5,
+    "minor": 4,
     "revision": 0
   },
   "properties": {
@@ -90,6 +90,15 @@
         "name": "New image",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/gilbert.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\gilbert.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -129,14 +138,15 @@
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 96,
           "layer": "",
           "name": "player_obj",
           "persistentUuid": "5db5b81e-799e-46fd-98c1-16f39afa7ebe",
-          "width": 0,
+          "width": 96,
           "x": 672,
-          "y": 640,
+          "y": 608,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -170,6 +180,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 5000,
               "canGoDownFromJumpthru": true,
               "canGrabPlatforms": false,
@@ -182,9 +194,7 @@
               "ladderClimbingSpeed": 150,
               "maxFallingSpeed": 700,
               "maxSpeed": 5000,
-              "name": "PlatformerObject",
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "useLegacyTrajectory": false,
               "xGrabTolerance": 10,
               "yGrabOffset": 0
@@ -202,7 +212,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite2",
+                      "image": "assets\\gilbert.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -218,20 +228,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 16,
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 49,
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 49,
+                            "y": 62
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 16,
+                            "y": 62
                           }
                         ]
                       ]
@@ -253,10 +263,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ]
@@ -315,6 +325,7 @@
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
+          "cameraType": "perspective",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
